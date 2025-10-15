@@ -1,5 +1,21 @@
 import React, { useState, useCallback } from 'react';
-import { Upload, FileText, Trash2, Download, Eye, AlertTriangle, CheckCircle, DollarSign, Building2, Search, Shield, TrendingUp, Globe, Flag, UserCheck } from 'lucide-react';
+import {
+  Upload,
+  FileText,
+  Trash2,
+  Download,
+  Eye,
+  AlertTriangle,
+  CheckCircle,
+  DollarSign,
+  Building2,
+  Search,
+  Shield,
+  TrendingUp,
+  Globe,
+  Flag,
+  UserCheck
+} from 'lucide-react';
 
 const ABACPrototype = () => {
   const [documents, setDocuments] = useState([]);
@@ -18,7 +34,7 @@ const ABACPrototype = () => {
     { id: '9', name: 'Payment_Confirmation_TRF_20240820.jpg', type: 'image/jpeg', size: 156672, status: 'completed', docType: 'payment_proof' }
   ];
 
-  // Mover demoAnalysis AQUÍ, antes de las funciones que lo usan
+  // Demo embebida
   const demoAnalysis = {
     transactionId: 'TRX-2024-ABC-001',
     summary: {
@@ -188,7 +204,7 @@ const ABACPrototype = () => {
         <p className="text-gray-600 mb-4">
           Intelligent system for analyzing commercial documentation to identify corruption risks according to ABAC standards
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
             <FileText className="h-8 w-8 text-blue-600 mb-2" />
@@ -492,6 +508,14 @@ const ABACPrototype = () => {
                       ))}
                     </ul>
                   </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-3">Findings</h4>
+                    <ul className="space-y-2">
+                      {demoAnalysis.webVerification.findings.map((finding, idx) => (
+                        <li key={idx} className="text-sm text-gray-700">• {finding}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
                 <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                   <h4 className="font-medium text-red-900 mb-2">Suitability Conclusion</h4>
@@ -645,11 +669,3 @@ const ABACPrototype = () => {
 };
 
 export default ABACPrototype;
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-3">Findings</h4>
-                    <ul className="space-y-2">
-                      {demoAnalysis.webVerification.findings.map((finding, idx) => (
-                        <li key={idx} className="text-sm text-gray-700">• {finding}</li>
-                      ))}
-                    </ul>
-                  </div>
