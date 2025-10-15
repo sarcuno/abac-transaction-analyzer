@@ -18,6 +18,7 @@ const ABACPrototype = () => {
     { id: '9', name: 'Payment_Confirmation_TRF_20240820.jpg', type: 'image/jpeg', size: 156672, status: 'completed', docType: 'payment_proof' }
   ];
 
+  // Mover demoAnalysis AQUÍ, antes de las funciones que lo usan
   const demoAnalysis = {
     transactionId: 'TRX-2024-ABC-001',
     summary: {
